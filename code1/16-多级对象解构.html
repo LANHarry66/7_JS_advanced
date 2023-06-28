@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const pig = {
+            name: '佩奇',
+            age: 4,
+            family: {
+                mother: 'mm',
+                father: 'bb',
+                sister: 'jj'
+            }
+        };
+        const { name, age, family: { mother, father, sister } } = pig
+    </script>
+</body>
+
+</html>

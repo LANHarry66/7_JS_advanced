@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Star(name, age) {
+            this.name = name;
+            this.age = age;
+            // this.sing = function(){
+            //     console.log('唱歌');
+            // }
+        }
+        // sing 方法最好写在原型上，这样不同对象都使用同一个sing方法
+        // 公共属性写在构造方法中
+        // 公共方法写在原型上
+        Star.prototype.sing = function(){
+            console.log('唱歌');
+        }
+        console.log(Star.prototype);
+        const ldh = new Star('ldh',55)
+        ldh.sing()
+    </script>
+</body>
+
+</html>

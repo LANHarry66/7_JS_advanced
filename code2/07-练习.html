@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        const s = { size: '40*40', color: '灰黑色' };
+        // Object.values(s)//返回数组
+        console.log(Object.values(s).join('/'));
+        const div = document.querySelector('div')
+        div.innerHTML = Object.values(s).join('/')
+    </script>
+</body>
+
+</html>

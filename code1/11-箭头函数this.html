@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 箭头函数中this指向作用域链上一层的this
+        // this指向window
+        // const fn = () => {
+        //     console.log(this);
+        // }
+        // fn()
+        // const obj = {
+        //     name : 'LHR',
+        //     sayHI : () =>{
+        //         console.log(this);
+        //     }
+        // }
+        // obj.sayHI()//this 指向window
+
+
+        const obj  = {
+            name :'LHR',
+            sayHi : function test(){
+                const demo = () => {
+                    console.log(this);
+                }
+                demo();
+            }
+        }
+        obj.sayHi()//this 指向obj
+    </script>
+</body>
+</html>

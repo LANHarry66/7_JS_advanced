@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 函数提升，函数在声明前调用
+        // 把函数声明提升到当前作用域最前面
+        // 只提升函数声明，不提升函数调用
+        f()
+        function f(){
+            console.log(1);
+        }
+    </script>
+</body>
+</html>

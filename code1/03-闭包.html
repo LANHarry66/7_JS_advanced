@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 闭包=内层函数+外层函数的变量 -->
+    <script>
+        // 闭包使用：让函数外层调用内层变量
+        // function out() {
+        //     const a = 1;
+        //     function inner() {
+        //         console.log(a);
+        //     }
+        //     return inner;
+        // }
+
+        // const fn = out();
+        // fn();
+
+        function f() {
+            let i = 0;
+            
+            function o() {
+                i++;
+                console.log(i);
+            }
+            return o;
+        }
+        let F = f();
+        F()
+    </script>
+</body>
+
+</html>
+<!-- 闭包作用：外层函数可以访问内层函数变量 -->

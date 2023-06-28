@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 箭头函数替代匿名函数 -->
+    <script>
+        function f1() {
+            console.log(1);
+        }
+        // 箭头函数 
+        const fn = () => {
+            console.log('箭头函数');
+        };
+        fn();
+        // const g = (x)=>{
+        //     console.log(x);
+        // }
+        // g(1)
+
+        // 如果只有一个参数，括号可省
+        // const g = x => {
+        //     console.log(x);
+        // };
+        // g(1)
+
+        // 只有一行代码 可以省略大括号
+        // const g = x => console.log(x);
+        // g(1)
+
+        // 只有一行代码 return 可以省
+        // const g = x => x + x;
+        // console.log(g(1));
+
+        // 直接放回对象
+        const g = (name) => ({ uname: name });
+        console.log(g('LLL'));
+    </script>
+</body>
+
+</html>

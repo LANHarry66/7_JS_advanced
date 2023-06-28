@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Star (){
+
+        }
+        const ldh = new Star()
+        // __proto__ 对象原型指向构造函数的原型对象
+        console.log(ldh.__proto__===Star.prototype);
+        // 对象原型里面有constructor  指向star
+        console.log(ldh.__proto__.constructor === Star);
+    </script>
+</body>
+</html>
+
+<!-- 
+    构造函数 可以创建 实例对象，且拥有prototype这个属性
+    实例对象 有属性__proto__指向原型对象prototye
+    实例对象的属性__proto__的constructor属性  指向 构造函数
+    原型对象prototype的constructor属性  指向 构造函数
+ -->

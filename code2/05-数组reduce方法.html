@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 返回累计处理的结果，用于求和
+        // 数组.reduce(function(上一次值，当前值){},初始值)
+        // 没有初始值，则上一次值是数组第一个元素
+        // 每次巡皇，把返回值作为下一次循环的 上一次值
+        // 如果有初始值，则初始值作为上一次值
+
+        const arr = [1, 2, 3];
+        const sum = arr.reduce(function (pre, now) {
+            return pre + now;
+        });
+        console.log(sum);
+
+        // 带初始值
+        const sum2 = arr.reduce(function (pre, now) {
+            return pre + now;
+        }, 10);
+        console.log(sum2);
+
+        // 箭头函数
+        const sum3 = arr.reduce((pre, now) => pre + now, 10);
+        console.log(sum3);
+
+
+        const person = [{
+            name: '张三',
+            salary: 10000
+        }, {
+            name: '李四',
+            salary: 10000
+        }, {
+            name: '王五',
+            salary: 20000
+        },
+        ]
+        const total = person.reduce((pre,now)=>{
+            // console.log(pre);
+            // console.log(now);
+            return pre + now.salary
+        },0) //初始值不能省 如果没有初始值，pre表示的是第一个对象，有了初始值后，pre=0
+        console.log(total);
+    </script>
+</body>
+
+</html>

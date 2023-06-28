@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const obj = {
+            name: 'LHR',
+            age: 19
+        };
+        // const {name,age} = obj
+
+        // 对象解构 改名 (旧：新)
+        const { name: name1, age } = obj;
+
+        const arr = [{ a: 1, b: '2' }];
+        const [{ a, b }] = arr
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [1,2,3]
+        console.log(...arr);//1 2 3
+        // 作用，求数字最大值，最小值，以及合并数字
+        console.log(Math.max(...arr));
+
+        const a = [3,4,5]
+        const b = [1,2,3]
+        const c = [...a,...b]
+        console.log(c);
+    </script>
+</body>
+</html>

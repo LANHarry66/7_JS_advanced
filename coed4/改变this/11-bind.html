@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>发送</button>
+    <script>
+        const obj = {
+            name: 'pink'
+        };
+        function fn() {
+            console.log(this);//window
+        }
+        //不会调用函数
+        // 改变this指向
+        // 返回值是一个函数，但是这个函数里面的this是更改过的obj
+        const f = fn.bind(obj);
+        // console.log(f);
+        f();
+
+        const btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            this.disabled = true;
+            setTimeout(function () {
+                // console.log(this);//window
+                // 改变this指向
+                // btn.disabled = false;
+                this.disabled = false;
+            }.bind(btn), 2000);
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 构造函数中this就是实例对象刘德华
+        let that;
+        let that2;
+        function Star(name) {
+            that = this;
+            this.name = name;
+        }
+        const ldh = new Star('刘德华');
+        console.log(that === ldh);
+
+        // 原型中this 还是指向实例对象刘德华
+        Star.prototype.sing = function () {
+            that = this;
+            console.log('唱歌');
+        };
+        ldh.sing();
+        console.log(that === ldh);
+    </script>
+</body>
+
+</html>
+<!-- 构造函数 和 原型 中的this 都指向实例化后的对象 -->

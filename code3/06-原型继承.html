@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const Person = {
+        //     eye: 2,
+        //     head: 1
+        // };
+
+        // 解决方法2 
+        function Person() {
+            this.eye = 2,
+            this.head = 1;
+        }
+        function Women() {
+
+        }
+        // women通过原型 继承person
+        // Women.prototype =Person;
+
+        Women.prototype = new Person();
+        // 指回原来的构造函数
+        Women.prototype.constructor = Women;
+
+        Women.prototype.baby = function () {
+            console.log('生孩子');
+        };
+        const F = new Women();
+        console.log(F);
+        function Man() {
+
+        }
+        // Man.prototype =Person;
+        Man.prototype = new Person();
+        Man.prototype.constructor = Man;
+
+        const M = new Man()
+        console.log(M);
+    </script>
+</body>
+
+</html>
+<!-- man 和 women 都继承了person，虽然在women的原型上加了baby方法，但是man 的实例对象也有baby方法 
+    解决方法1就是 继承不同person对象，且内容一样
+    解决方法2用person构造函数
+-->

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Star (){
+
+        }
+
+        // const ldh = new Star()
+        // console.log(Star.prototype.constructor === Star);
+
+        // Star.prototype.sing = function(){
+        //     console.log('唱歌');
+        // }
+        // Star.prototype.dance = function(){
+        //     console.log('跳舞');
+        // }
+        console.log(Star.prototype);
+        Star.prototype = {
+            // 重新创造原型对象的构造函数
+            constructor : Star,
+            sing : function(){
+                console.log('唱歌');
+            },
+            dance : function(){
+                console.log('跳舞');
+            }
+        }
+        console.log(Star.prototype);
+// constructor 作用，指回 原型对象的构造函数
+    </script>
+</body>
+</html>

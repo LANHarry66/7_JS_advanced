@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const o = { name: 'lhr', age: 18, gender: 'M' }
+        // 获得o全部属性名
+        console.log(Object.keys(o));
+        // 获得o所有属性值
+        console.log(Object.values(o));
+        // 拷贝对象,o给oo
+        const oo =  {}
+        Object.assign(oo,o)
+        console.log(oo);
+
+        
+    </script>
+</body>
+
+</html>

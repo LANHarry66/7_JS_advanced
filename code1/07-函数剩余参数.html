@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getSum(a, b, ...arr) {
+            let sum = 0;
+            sum = a + b;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return sum;
+        }
+        console.log(getSum(1,2));//1给a，2给b，arr为空
+        console.log(getSum(1, 2, 3));//1给a，2给b，3给arr
+    </script>
+</body>
+
+</html>
+<!-- 总结
+    剩余参数是真数组，可以 push pop 。。。
+    开发中推荐用剩余参数
+ -->

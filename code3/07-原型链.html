@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(){
+
+        }
+        const ldh = new Person();
+        // console.log(ldh.__proto__===Person.prototype );
+        // console.log(Person.prototype.__proto__ === Object.prototype);
+
+        // instanceof检查对象是否属于某个构造函数
+        console.log(ldh instanceof Person);//true//和java中的instanceof 一个意思
+        console.log(ldh instanceof Object);//true
+        console.log(ldh instanceof Array);//false
+
+        console.log(Array instanceof Object);//true
+        console.log(Person instanceof Object);//true
+
+    </script>
+</body>
+</html>
